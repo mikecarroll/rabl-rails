@@ -95,7 +95,6 @@ module Visitors
     # rendering time).
     #
     def partial(template_path, options = {})
-      raise RablRails::Renderer::PartialError.new("No object was given to partial #{template_path}") unless options[:object]
       object = options[:object]
       @_locals = options[:locals].freeze
 
